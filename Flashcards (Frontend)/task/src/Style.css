@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Roboto", sans-serif, bold;
+}
+
+body {
+    background: url("https://stepik.org/media/attachments/lesson/374893/world.png");
+    background-size: 100%;
+}
+
+.grid-container {
+    display: grid;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    grid-gap: 25px 25px;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px;
+}
+
+.grid-item {
+    background-color: antiquewhite;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif, bold;
+    text-align: center;
+    color: coral;
+    width: 100px;
+    height: 100px;
+}
+
+.front, .back, .card {
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.grid-item {
+    transition: background-color 2s linear, transform 2s linear;
+    transform-style: preserve-3d;
+}
+
+.grid-item:hover {
+    transform: rotateY(180deg);
+    background-color: coral;
+}
+
+.front, .back, .card {
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.back {
+    transform: rotateY(180deg);
+    color: antiquewhite;
+}
